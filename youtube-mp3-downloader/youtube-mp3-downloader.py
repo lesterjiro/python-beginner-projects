@@ -14,7 +14,7 @@ def download_mp3(link, download_path):
 
         out_file = yd.download(download_path)
 
-        base = os.path.splitext(out_file)[0]
+        base, ext = os.path.splitext(out_file)
         new_file = base + '.mp3'
         os.rename(out_file, new_file)
         print(f"Download Complete, saved to {download_path}")
